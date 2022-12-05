@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       MegaTechart
-// @match        https://mylead.global/panel/programs/*
+// @match        https://mylead.global/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=mylead.global
 // @grant        none
 // ==/UserScript==
@@ -15,5 +15,4 @@
     if(site != null) {
         localStorage.setItem("__campain_site_mylead", site);
     }
-    // Your code here...
 })();

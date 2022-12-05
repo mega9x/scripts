@@ -38,7 +38,7 @@ const run = async () => {
         timeout = 0;
         let waitTime = Math.round(Math.random() * min + max);
         d.querySelector(actionBtnQuery).click();
-        while(timeout <= 5){
+        while(timeout <= 5) {
             await sleep(5000);
             container = document.querySelector(popupContainer);
             if(container != null) {
