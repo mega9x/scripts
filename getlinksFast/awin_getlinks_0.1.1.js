@@ -1,3 +1,7 @@
+/*
+    此脚本依赖前置脚本 Awin SVIP.js
+    作用于: https://ui.awin.com/awin/affiliate/1202578/merchant-directory/index/tab/active/page/1
+*/
 
 const tableBodyQuery = "tbody";
 
@@ -33,6 +37,8 @@ const run = async () => {
         }
         win.close();
     }
+    names.replace("undefined", "");
+    uris.replace("undefined", "");
     console.log(names);
     console.log(uris);
 }
