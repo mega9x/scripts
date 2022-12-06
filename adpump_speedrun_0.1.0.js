@@ -95,16 +95,19 @@ const run = async () => {
         for(let t of trs) {
             let tds = t.querySelectorAll("td");
             for(let td of tds) {
+                console.log(td);
                 let dataColumn = td.getAttribute("data-column");
                 if(dataColumn != null && dataColumn.includes("maxPrice")) {
                     let ifBreak = false;
                     if(td.innerText.includes("%")) {
+                        console.log("有百分号");
                         break;
                     }
                     let price = td.innerText.replace("$", "").split("-")
                     for(let p of price) {
                         if(p > 10) {
                             ifBreak = true;
+                            console.log("金额过大");
                             break;
                         }
                     }
@@ -113,6 +116,7 @@ const run = async () => {
                     }
                 }
                 if (dataColumn != null && dataColumn.includes("actions")) {
+                    console.log("正在处理");
                     console.log(td);
                     let form = td.querySelector("form");
                     if(form == null) continue;
