@@ -8,6 +8,8 @@
     4.5. 如果没有连点器, 则需要手动点击同意条款.
 
     注: 可以修改常数 min 和 max (单位都是毫秒) 来修改等待的时间. 默认是 15000(15秒) 到 60000 (一分钟)
+
+    作用于: https://members.cj.com/member/5849095/publisher/advertisers/findAdvertisers.cj
 */
 
 const min = 15000;

@@ -1,3 +1,8 @@
+/*
+    本脚本需要前置脚本: adsterra_autoaccept
+    作用于网站: https://beta.affiliates.adsterra.com/offers
+*/
+
 function sleep(delay) {
     return new Promise(r => setTimeout(r, delay));
 }

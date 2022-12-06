@@ -1,6 +1,6 @@
 /*
     用法和前几个脚本大致相同.
-    目标网站：https://adpump.com/ww-en/wmOffers/page:1?available=1&notFavourite=1&geo%5B0%5D=US&currency=2&sort=1
+    作用于网站：https://adpump.com/ww-en/wmOffers/page:1?available=1&notFavourite=1&geo%5B0%5D=US&currency=2&sort=1
 */
 let pages = 1;
 let maxPages = document.querySelector(".smartPaginator").querySelector(".last").innerText;

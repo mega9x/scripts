@@ -1,3 +1,8 @@
+/*
+    此脚本依赖前置脚本 Cj SVIP.js
+    作用于: https://members.cj.com/member/5849095/publisher/advertisers/findAdvertisers.cj
+*/
+
 const localStorgeTmpKey = "__campain_site_cj";
 const getlinkBtnQuery = ".get-links-container";
 const tableQuery = ".adv-row-wrapper";
@@ -31,6 +36,8 @@ const run = async () => {
         }
         win.close();
     }
+    names.replace("undefined", "");
+    uris.replace("undefined", "");
     console.log(names);
     console.log(uris);
 }

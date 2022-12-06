@@ -1,3 +1,9 @@
+/*
+    此脚本为自动获取 HTML 脚本. 不依赖前置.
+    作用于: https://www.cpalead.com/dashboard/
+    注意: 仅需要修改过滤器的国家一项. 修改为 United States.
+*/
+
 const sleep = (delay) => {
     return new Promise(r => setTimeout(r, delay))
 }
@@ -28,7 +34,7 @@ const run = async () => {
                 popupContainer = document.querySelector("#survey_details")
                 if(popupContainer != null && popupContainer.querySelector("textarea").value != popupBefore) {
                     names = names + name + "\n";
-                    uris = uris + popupContainer.querySelector("textarea").value + "\n";
+                    uris = uris + popupContainer.querySelector("textarea").value.replace(/\r?\n|\r/g, "") + "\n";
                     break;
                 }
                 await sleep(1500);
@@ -39,6 +45,7 @@ const run = async () => {
 }
 
 await run();
-
+names.replace("undefined", "");
+uris.replace("undefined", "");
 console.log(names);
 console.log(uris);

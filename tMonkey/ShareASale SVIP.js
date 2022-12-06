@@ -19,7 +19,8 @@ function sleep(delay) {
         let textarea = document.querySelector(".urlOnlyCont > textarea");
         if(textarea != null) {
             localStorage.setItem("__campain_site_shareasale", textarea.value);
+            break;
         }
-        await sleep(1000);
+        await sleep(3000);
     }
 })();

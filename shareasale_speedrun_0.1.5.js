@@ -7,8 +7,9 @@
 
     注: 可以修改常数 wait(单位毫秒) 来修改等待的时间. 默认是 30000 (半分钟)
 
-    更新: 
+更新:
         半自动改全自动.
+     作用于: https://account.shareasale.com/a-programs.cfm#searchType=basicKeyword&start=1&order=&resultFilter=&shipto=US&perlead=1&catalog=0
 */
 
 const min = 15000;

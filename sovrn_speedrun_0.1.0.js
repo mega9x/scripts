@@ -15,6 +15,8 @@
             6. 点击后, 找到这个窗口右侧的窗口顶部栏上的"标头" (Header). 下面的网址应该会显示成这样.
                 https://platform.sovrn.com/api/commerce/platform/campaigns/ {一些数字} /anywhere
                 这里的 {一些数字} 就是我们需要的 siteId. 把这玩意放到本脚本里的 siteId 里. (注意加双引号)
+
+     作用于: https://platform.sovrn.com/commerce/approved-merchants
 */
 
 // 请把 siteId 和 siteApiKey 改成自己的

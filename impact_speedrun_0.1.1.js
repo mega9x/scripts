@@ -11,6 +11,8 @@
 
 更新:
     现在可以全自动申请了
+
+    作用于: https://app.impact.com/secure/mediapartner/marketplace/new-campaign-marketplace-flow.ihtml?execution=e4s1#/all/categories=100,103,102,104,101,121,105&actions=LEAD&servicearea=US
 */
 
 const actionContainerQuery = ".actionContainer";

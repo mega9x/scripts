@@ -1,3 +1,8 @@
+/*
+    此脚本依赖前置脚本 ShareASale SVIP.js
+    作用于: https://account.shareasale.com/a-programs.cfm#searchType=basicKeyword&start=1&order=&resultFilter=&notjoined=0&ascordesc=desc
+*/
+
 const localStorgeTmpKey = "__campain_site_shareasale";
 const tableQuery = ".fullResult";
 const nameQuery = ".org > a";
@@ -32,6 +37,8 @@ const run = async () => {
         win.close();
         await sleep(1000)
     }
+    names.replace("undefined", "");
+    uris.replace("undefined", "");
     console.log(names);
     console.log(uris);
 }

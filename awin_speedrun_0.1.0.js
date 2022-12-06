@@ -12,6 +12,8 @@
     4. 本脚本没有实现自动翻页, 所以请翻页后手动执行该脚本.
 
     注: 可以修改常数 min 和 max (单位都是毫秒) 来修改等待的时间. 默认是 15000(15秒) 到 40000 (40秒)
+
+    作用于: https://ui.awin.com/awin/affiliate/1202578/merchant-directory/index/tab/active/page/1
 */
 
 const tableQuery = ".merchantDirectory";

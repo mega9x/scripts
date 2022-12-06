@@ -1,3 +1,8 @@
+/*
+    此脚本依赖前置脚本 Mylead SVIP.js
+    作用于: https://mylead.global/panel/programs?status=0
+*/
+
 const localStorgeTmpKey = "__campain_site_mylead";
 const tableQuery = "#table-responsive";
 const trQuery = "tr";
@@ -35,6 +40,8 @@ const run = async () => {
     for(let u of uris) {
         uri = uri + u + "\n";
     }
+    names.replace("undefined", "");
+    uris.replace("undefined", "");
     console.log(name);
     console.log(uri);
 }

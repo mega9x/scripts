@@ -1,4 +1,7 @@
-// 此脚本为自动创建链接脚本. 不依赖前置.
+/*
+   此脚本为自动创建链接脚本. 不依赖前置.
+   作用于: https://app.impact.com/secure/mediapartner/ads/manage-vanity-urls-flow.ihtml?execution=e2s1#sortBy=dateOfEntry&sortOrder=ASC
+*/
 
 const advTableQuery = ".rowActionsRow";
 const leftContainerQuery = ".leftSlideContent";
