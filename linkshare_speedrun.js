@@ -11,7 +11,7 @@
 const min = 1000;
 const max = 10000;
 
-const pageCount = document.querySelector("#ViewPerPageArea").querySelectorAll("a")[4].innerText;
+const pageCount = parseInt(document.querySelector("#ViewPerPageArea").querySelectorAll("a")[4].innerText);
 const pageUri = "https://cli.linksynergy.com/cli/publisher/programs/advertisers.php";
 const applyPostUri = "https://cli.linksynergy.com/cli/publisher/programs/apply_confirmation.php";
 
@@ -40,7 +40,7 @@ let pagePostBody = {
     category: -1,
     filter_status: "all",
     filter_type: "all",
-    filter_banner_size: 1,
+    filter_banner_size: -1,
     filter_networks: "all",
     "shippingcountries[]": "US",
     orderby: "",
@@ -131,13 +131,13 @@ const getApplyPage = async (singleApply) => {
 
 const run = async () => {
     let pageCurrent = -99;
-    pageCurrent = parseInt(document.querySelector("input[name=currec]").value) + 100;
+     pageCurrent = parseInt(document.querySelector("input[name=currec]").value) + 100;
     for(let i = 1; i <= pageCount; i++) {
         await sleep("50");
         let page = await getPage(pageCurrent);
         if(i != 1){
-            console.log(pageCurrent);
-            pageCurrent = parseInt(page.querySelector("input[name=currec]").value) + 100;
+             console.log(pageCurrent);
+             pageCurrent = parseInt(page.querySelector("input[name=currec]").value) + 100;
         }
         const trs = page.querySelector(".programTable > tbody").querySelectorAll("tr");
         for(let t of trs) {
@@ -174,12 +174,12 @@ const run = async () => {
             if(inputOnclick === null) {
                 console.log("这个被操作过");
                 console.log(t);
-                break;
+                continue;
             }
             let inputOnclickStr = inputOnclick.getAttribute("onclick");
             let singleApplyMatched = inputOnclickStr.match(/[0-9]+~[0-9]+~[0-9]/);
             if(singleApplyMatched === null) {
-                break;
+                continue;
             }
             let singleApply = singleApplyMatched[0];
             let applyDoc = await getApplyPage(singleApply);
