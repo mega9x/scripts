@@ -9,7 +9,7 @@
 
 // 请自行修改这个值来改变请求间隔
 const min = 1000;
-const max = 10000;
+const max = 20000;
 
 const pageCount = parseInt(document.querySelector("#ViewPerPageArea").querySelectorAll("a")[4].innerText);
 const pageUri = "https://cli.linksynergy.com/cli/publisher/programs/advertisers.php";
@@ -130,8 +130,7 @@ const getApplyPage = async (singleApply) => {
 }
 
 const run = async () => {
-    let pageCurrent = -99;
-     pageCurrent = parseInt(document.querySelector("input[name=currec]").value) + 100;
+    let pageCurrent = 1;
     for(let i = 1; i <= pageCount; i++) {
         await sleep("50");
         let page = await getPage(pageCurrent);
