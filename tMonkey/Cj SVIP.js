@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       Omega
-// @match        https://members.cj.com/member/5849095/publisher/links/search/*
+// @match        https://members.cj.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=cj.com
 // @grant        none
 // ==/UserScript==
