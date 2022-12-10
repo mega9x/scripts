@@ -113,9 +113,9 @@ const run = async () => {
         if(a === null) {
             break;
         }
-        page = await fetch(a.href);
-        let dom = new DOMParser().parseFromString(await page.text(), "text/html");
-        await handler(dom);
+        let pageText = await fetch(a.href);
+        page = new DOMParser().parseFromString(await pageText.text(), "text/html");
+        await handler(page);
     }
 }
 
