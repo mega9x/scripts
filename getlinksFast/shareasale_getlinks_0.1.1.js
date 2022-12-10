@@ -22,6 +22,9 @@ const run = async () => {
         requestTime = 0;
         let uriBefore = localStorage.getItem(localStorgeTmpKey);
         let name = action.querySelector(nameQuery).innerHTML;
+        if(name.includes("sunsky")) {
+            continue;
+        }
         let link = action.querySelector(actionBtnQuery).getAttribute("href");
         let win = window.open(link, "_blank", "height=100; weight=100;");
         while(requestTime < 30) {
