@@ -14,7 +14,7 @@ const max = 20000;
 // 修改最小金额
 const minMoney = 0.95;
 // 修改最大金额
-cosnt maxMoney = 
+cosnt maxMoney = 30;
 
 
 const pageCount = parseInt(document.querySelector("#ViewPerPageArea").querySelectorAll("a")[4].innerText);
