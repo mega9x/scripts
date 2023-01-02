@@ -11,6 +11,12 @@
 const min = 1000;
 const max = 20000;
 
+// 修改最小金额
+const minMoney = 0.95;
+// 修改最大金额
+cosnt maxMoney = 
+
+
 const pageCount = parseInt(document.querySelector("#ViewPerPageArea").querySelectorAll("a")[4].innerText);
 const pageUri = "https://cli.linksynergy.com/cli/publisher/programs/advertisers.php";
 const applyPostUri = "https://cli.linksynergy.com/cli/publisher/programs/apply_confirmation.php";
@@ -155,10 +161,10 @@ const run = async () => {
             let prices = stupidCommission.matchAll(priceRegex);
             for(let p of prices) {
                 try {
-                    if(p[2].replace(dollarSignRegex, "") > 20 || p[2].replace(dollarSignRegex, "") < 0) {
+                    if(p[2].replace(dollarSignRegex, "") > maxMoney || p[2].replace(dollarSignRegex, "") < minMoney) {
                         ifCon = true;
                         console.log(p[2]);
-                        console.log("金额过大");
+                        console.log("金额不匹配");
                     }
                 } catch(e) {
                     ifCon = true;
